@@ -15,7 +15,7 @@ const conteudoInicialHTML = `
     </div>
     <div class="botoes">
         <button id="btn-sim">Sim!</button>
-        <button id="btn-nao">Não</button>
+        <button id="btn-nao">Não!</button>
     </div>
 `;
 
