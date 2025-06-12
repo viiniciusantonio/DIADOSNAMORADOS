@@ -90,7 +90,7 @@ function fugir() {
 function responderSim() {
     // Altera o HTML interno do cartão para a mensagem de "Eu te amo"
     card.innerHTML = `
-        <h1>😏😏😏😏😏😏 EU TE AMOOO!</h1> <h4>❤️FELIZ DIA DOS NAMORADOS!❤️</h4>
+        <h1>😏EU TE AMOOO!😏</h1> <h4>❤️FELIZ DIA DOS NAMORADOS!❤️</h4>
         <p class="mensagem">Sabia que você iria aceitar, aqui é caminho sem volta. Que DEUS continue abençoando nosso Amor!<br> <h5>Se conseguir clicar no "Não" da página anterior, ganha $150 no PIX.🤑</h5> </p>
         <img src="comemoração.guif.gif" alt="Comemoração" width="250">
         <button id="btn-voltar" class="botao-voltar">Voltar e ganhar meus $150</button>
