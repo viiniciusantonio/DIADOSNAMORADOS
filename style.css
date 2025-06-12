@@ -11,9 +11,6 @@ body {
     font-family: 'Poppins', sans-serif; /* Define a fonte principal para a maioria do texto */
     text-align: center; /* Alinha o texto ao centro dentro de seus contêineres */
     margin: 0; /* Remove a margem padrão que os navegadores aplicam ao body */
-    
-    /* Remove ou reduz o padding fixo do body para melhor adaptação em celulares.
-       Vamos usar padding diretamente no .card ou com media queries se necessário. */
     padding: 0; /* Removendo o padding fixo que causava problemas em telas pequenas */
 }
 
@@ -91,6 +88,13 @@ button {
     position: relative; /* Essencial para que o JavaScript possa movê-lo usando 'left' e 'top' */
 }
 
+/* **NOVO: Garante que o botão "Não" NÃO mude de cor ao passar o mouse ou ao ser ativado/clicado** */
+#btn-nao:hover,
+#btn-nao:active {
+    background-color: #f44336; /* Mantém a cor de fundo vermelha original */
+    color: white; /* Mantém a cor do texto branca original */
+}
+
 /* Estilos para o novo botão "Voltar" */
 #btn-voltar {
     background-color: #c2185b; /* Cor de fundo que combina com o título (vinho/rosa escuro) */
@@ -112,14 +116,18 @@ button {
     background-color: #a00040; /* Cor de fundo azul mais escura no hover */
 }
 
+/* Estilos para o novo texto de celebração quando o "Sim!" é clicado */
+.celebracao-texto {
+    font-size: 1.2em; /* Um pouco maior para destaque */
+    color: #c2185b; /* Na paleta de cores principal */
+    margin-top: 25px; /* Espaçamento acima */
+    font-weight: bold; /* Deixa o texto em negrito */
+    line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
+}
 
 /* --- Media Queries para Telas Menores (Celulares) --- */
-
-/* Aplica estes estilos quando a largura da tela for no MÁXIMO 600px */
 @media (max-width: 600px) {
     body {
-        /* Reduzir o padding geral ou remover se estiver atrapalhando */
-        /* height: auto; /* Pode ser útil para que o body não ocupe 100vh em celulares com barras de navegação */
         padding: 20px; /* Um padding menor para celulares */
     }
 
@@ -145,26 +153,4 @@ button {
         width: 100%; /* Faz com que os botões ocupem 100% da largura disponível no contêiner */
         box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
     }
-}
-
-/* Você pode adicionar mais media queries para diferentes tamanhos de tela se precisar de ajustes mais finos:
-@media (max-width: 400px) {
-    .card {
-        padding: 15px;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
-}
-*/
-
-/* Efeito hover para o botão "Voltar": muda a cor de fundo quando o mouse passa por cima */
-#btn-voltar:hover {
-    background-color: #a00040; /* Um tom ligeiramente mais escuro para o hover, ainda na mesma paleta */
-}
-
-#btn-nao {
-    background-color: #f44336;
-    color: white;
-    position: relative;
 }
