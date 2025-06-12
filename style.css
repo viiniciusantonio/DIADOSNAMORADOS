@@ -1,67 +1,166 @@
+/* Importa fontes do Google Fonts para um visual mais atraente e moderno */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
 
+/* Estilos aplicados ao corpo de toda a página */
 body {
-    background-color: #fce4ec;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 130px;
+    background-color: #fce4ec; /* Define uma cor de fundo rosa claro para a página */
+    display: flex; /* Usa Flexbox para um alinhamento flexível e fácil */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente no container flex */
+    align-items: center; /* Centraliza o conteúdo verticalmente no container flex */
+    height: 100vh; /* Faz com que o body ocupe 100% da altura da viewport (tela visível) */
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal para a maioria do texto */
+    text-align: center; /* Alinha o texto ao centro dentro de seus contêineres */
+    margin: 0; /* Remove a margem padrão que os navegadores aplicam ao body */
+    
+    /* Remove ou reduz o padding fixo do body para melhor adaptação em celulares.
+       Vamos usar padding diretamente no .card ou com media queries se necessário. */
+    padding: 0; /* Removendo o padding fixo que causava problemas em telas pequenas */
 }
 
+/* Estilos para a caixa principal que contém todo o conteúdo do cartão */
 .card {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    max-width: 340px;
+    background-color: #ffffff; /* Define a cor de fundo do cartão como branco */
+    padding: 30px; /* Adiciona preenchimento interno em todos os lados do cartão */
+    border-radius: 15px; /* Arredonda as bordas do cartão, dando uma aparência suave */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil para dar profundidade ao cartão */
+    max-width: 340px; /* Define uma largura máxima para o cartão, para que ele não fique muito largo em telas grandes */
+    width: 90%; /* Define a largura do cartão como 90% da largura do pai (body),
+                  garantindo que ele se ajuste em telas menores, mas respeite o max-width */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura do elemento */
 }
 
+/* Estilos para o título principal (h1) dentro do cartão */
 h1 {
-    font-family: 'Playfair Display', serif;
-    color: #c2185b;
-    margin-bottom: 18px;
+    font-family: 'Playfair Display', serif; /* Define uma fonte serifada elegante para o título */
+    color: #c2185b; /* Define a cor do texto do título como um tom de vinho/rosa escuro */
+    margin-bottom: 18px; /* Adiciona um espaço abaixo do título */
+    font-size: 2em; /* Tamanho da fonte relativo (2x o tamanho base do elemento pai) */
 }
 
+/* Estilos para as imagens dentro do cartão */
 img {
-    border-radius: 10px;
-    margin-bottom: 20px;
-    border: 3px solid #f8bbd0;
-    max-width: 100%;
+    border-radius: 10px; /* Arredonda as bordas da imagem */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem */
+    border: 3px solid #f8bbd0; /* Adiciona uma borda sólida rosa clara ao redor da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura de seu contêiner pai */
+    height: auto; /* Mantém a proporção original da imagem ao redimensioná-la */
 }
 
+/* Estilos para o parágrafo que contém a mensagem principal */
 .mensagem {
-    font-size: 16px;
-    color: #444;
+    font-size: 16px; /* Tamanho da fonte padrão */
+    color: #444; /* Cor do texto cinza escuro */
 }
 
+/* Estilos para a seção que contém a pergunta */
 .pergunta {
-    margin: 20px 0;
-    font-size: 18px;
-    font-weight: bold;
+    margin: 20px 0; /* Adiciona margem superior e inferior para espaçamento */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto da pergunta em negrito */
 }
 
+/* Estilos para o contêiner que agrupa os botões "Sim" e "Não" */
 .botoes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Usa Flexbox para organizar os botões lado a lado */
+    justify-content: center; /* Centraliza os botões horizontalmente dentro do contêiner */
+    gap: 20px; /* Adiciona um espaço de 20px entre os botões */
+    flex-wrap: wrap; /* Permite que os itens (botões) quebrem para a próxima linha se não houver espaço suficiente */
 }
 
+/* Estilos gerais aplicados a todos os elementos <button> */
 button {
-    padding: 10px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 10px 25px; /* Adiciona preenchimento interno aos botões */
+    border: none; /* Remove a borda padrão do navegador para os botões */
+    border-radius: 8px; /* Arredonda as bordas dos botões */
+    font-size: 16px; /* Define o tamanho da fonte para o texto dos botões */
+    cursor: pointer; /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o botão */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades CSS alteradas no hover */
+    flex-shrink: 0; /* Impede que os botões diminuam além de seu conteúdo, útil com flex-wrap */
 }
 
+/* Estilos específicos para o botão com o ID 'btn-sim' (o botão "Sim!") */
 #btn-sim {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* Define a cor de fundo como verde */
+    color: white; /* Define a cor do texto como branco */
+}
+
+/* Estilos específicos para o botão com o ID 'btn-nao' (o botão "Não") */
+#btn-nao {
+    background-color: #f44336; /* Define a cor de fundo como vermelho */
+    color: white; /* Define a cor do texto como branco */
+    position: relative; /* Essencial para que o JavaScript possa movê-lo usando 'left' e 'top' */
+}
+
+/* Estilos para o novo botão "Voltar" */
+#btn-voltar {
+    background-color: #c2185b; /* Cor de fundo que combina com o título (vinho/rosa escuro) */
+    color: white; /* Cor do texto branca para contraste */
+    margin-top: 20px; /* Margem superior para separar do conteúdo acima */
+    padding: 10px 20px; /* Preenchimento interno */
+    border-radius: 8px; /* Arredonda as bordas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Altera o cursor do mouse */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+    width: fit-content; /* Faz com que a largura do botão se ajuste ao seu conteúdo de texto */
+    display: block; /* Transforma o botão em um elemento de bloco, permitindo que 'margin: auto' o centralize */
+    margin-left: auto; /* Centraliza o botão horizontalmente */
+    margin-right: auto; /* Centraliza o botão horizontalmente */
+}
+
+/* Efeito de hover para o botão "Voltar": muda a cor de fundo quando o mouse passa por cima */
+#btn-voltar:hover {
+    background-color: #a00040; /* Cor de fundo azul mais escura no hover */
+}
+
+
+/* --- Media Queries para Telas Menores (Celulares) --- */
+
+/* Aplica estes estilos quando a largura da tela for no MÁXIMO 600px */
+@media (max-width: 600px) {
+    body {
+        /* Reduzir o padding geral ou remover se estiver atrapalhando */
+        /* height: auto; /* Pode ser útil para que o body não ocupe 100vh em celulares com barras de navegação */
+        padding: 20px; /* Um padding menor para celulares */
+    }
+
+    .card {
+        width: 95%; /* Ocupa um pouco mais da largura em telas pequenas */
+        padding: 20px; /* Reduz o padding do cartão para economizar espaço */
+    }
+
+    h1 {
+        font-size: 1.7em; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .mensagem, .pergunta, button {
+        font-size: 15px; /* Reduz ligeiramente o tamanho da fonte para o texto e botões */
+    }
+
+    .botoes {
+        flex-direction: column; /* Faz com que os botões "Sim" e "Não" fiquem um embaixo do outro */
+        gap: 10px; /* Reduz o espaço entre os botões quando estão em coluna */
+    }
+
+    button {
+        width: 100%; /* Faz com que os botões ocupem 100% da largura disponível no contêiner */
+        box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+    }
+}
+
+/* Você pode adicionar mais media queries para diferentes tamanhos de tela se precisar de ajustes mais finos:
+@media (max-width: 400px) {
+    .card {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+*/
+
+/* Efeito hover para o botão "Voltar": muda a cor de fundo quando o mouse passa por cima */
+#btn-voltar:hover {
+    background-color: #a00040; /* Um tom ligeiramente mais escuro para o hover, ainda na mesma paleta */
 }
 
 #btn-nao {
